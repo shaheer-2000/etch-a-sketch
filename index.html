@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/main.css" type="text/css">
+	<script src="scripts/index.js" type="module" defer></script>
+	<title>Etch-A-Sketch</title>
+</head>
+<body>
+	<section id="main">
+		<div id="sketch-container" class="container d-flex center">
+			<!--controls go here-->
+			<div id="controls-box" class="d-flex flex-col" style="justify-content: center; align-items: baseline;">
+				<div class="clear-grid-container d-flex center">
+					<button id="clear-grid">Clear Grid</button>
+				</div>
+				<div class="slider-container d-flex center mt-20">
+					<label for="grid-slider">Grid Dimensions (NxN)</label>
+					<input type="range" min="16" max="99" value="16" class="slider" id="grid-slider" name="grid-slider">
+				</div>
+			</div>
+			<div id="sketch-box" class="grid mt-20">
+
+			</div>
+		</div>
+	</section>
+</body>
+</html>

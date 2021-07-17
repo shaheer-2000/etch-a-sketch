@@ -1,0 +1,79 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--no-of-columns: 16;
+	--no-of-rows: 16;
+}
+
+body {
+	height: 100%;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.center {
+	justify-content: center;
+	align-items: center;
+}
+
+.grid {
+	display: grid;
+	grid-template-rows: repeat(var(--no-of-columns), auto);
+	grid-template-columns: repeat(var(--no-of-rows), auto);
+}
+
+.pixel-box {
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.7);
+	width: calc(var(--sketch-box-width) / var(--no-of-columns));
+	height: calc(var(--sketch-box-width) / var(--no-of-rows));
+	transition: background-color 0.5s;
+}
+
+.marked {
+	background-color: #000;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.slider-container {
+	min-width: 100%;
+}
+
+.mr-20 {
+	margin-right: 20px;
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
+
+#sketch-box {
+	--sketch-box-width: 600px;
+	width: var(--sketch-box-width);
+}
+
+#controls-box {
+	margin-right: 20px;
+}
+
+@media screen and (max-width: 800px) {
+	#sketch-container {
+		flex-direction: column;
+	}
+
+	#controls-box {
+		margin-right: 0px;
+	}
+
+	#sketch-box {
+		--sketch-box-width: 75vw;
+	}
+}
+
